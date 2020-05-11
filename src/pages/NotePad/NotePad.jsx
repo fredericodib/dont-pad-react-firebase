@@ -22,8 +22,7 @@ class Text extends Component {
       const { location } = this.props;
       const db = firebase.firestore();
 
-      this.observer = db
-        .collection("notepad")
+      db.collection("notepad")
         .doc(btoa(location.pathname))
         .set({ text: value });
     });

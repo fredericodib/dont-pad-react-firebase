@@ -23,7 +23,7 @@ class Text extends Component {
       const db = firebase.firestore();
 
       db.collection("notepad")
-        .doc(btoa(location.pathname))
+        .doc(btoa(location.pathname.replace(/\/*$/, "")))
         .set({ text: value });
     });
   };
@@ -34,7 +34,7 @@ class Text extends Component {
 
     this.observer = db
       .collection("notepad")
-      .doc(btoa(location.pathname))
+      .doc(btoa(location.pathname.replace(/\/*$/, "")))
       .onSnapshot((docSnapshot) => {
         if (docSnapshot.data()) {
           this.setState({ text: docSnapshot.data().text });

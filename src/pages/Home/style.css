@@ -5,3 +5,27 @@
   flex-direction: column;
   height: 100vh;
 }
+
+.Home > h1 {
+  font-size: 32px;
+}
+
+.Home > input {
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 200px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.Home > a {
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Home > a:hover {
+  opacity: 0.7;
+}

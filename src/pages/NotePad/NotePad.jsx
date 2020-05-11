@@ -25,7 +25,7 @@ class Text extends Component {
       this.observer = db
         .collection("notepad")
         .doc(btoa(location.pathname))
-        .update({ text: value });
+        .set({ text: value });
     });
   };
 

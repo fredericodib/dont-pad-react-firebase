@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import "normalize.css";
 
 import "./App.css";
 import Home from "./pages/Home/Home";
